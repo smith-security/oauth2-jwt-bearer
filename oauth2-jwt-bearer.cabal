@@ -1,0 +1,44 @@
+name: oauth2-jwt-bearer
+version: 0.0.1
+synopsis: OAuth2 jwt-bearer client flow as per rfc7523
+homepage: https://github.com/smith-security/oauth2-jwt-bearer
+license:  BSD3
+license-file: LICENSE
+author: Mark Hibberd
+maintainer: mth@smith.st
+copyright: (c) 2018, HotelKilo
+category: Network
+build-type: Simple
+extra-source-files: ChangeLog.md, README.md
+cabal-version: >= 1.10
+
+library
+  default-language: Haskell2010
+  build-depends:
+      aeson >= 1.0 && < 1.5
+    , base >= 4.10 && < 5
+    , text == 1.*
+    , http-client >= 0.5 && < 0.6
+    , http-client-tls >= 0.2 && < 0.4
+    , http-types == 0.*
+    , jose == 0.7.*
+
+  hs-source-dirs:
+    src
+
+  exposed-modules:
+    Network.OAuth2.JWT.Client.Data
+    Network.OAuth2.JWT.Client.AuthorizationGrant
+
+test-suite test
+  default-language: Haskell2010
+  type: exitcode-stdio-1.0
+  main-is: test.hs
+  hs-source-dirs: test
+  build-depends:
+      base >= 4.10 && < 5
+    , hedgehog == 0.6.*
+    , oauth2-jwt-bearer
+
+  other-modules:
+    Test.Network.OAuth2.JWT.Client.AuthorizationGrant

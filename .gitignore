@@ -1,0 +1,11 @@
+.cabal-sandbox
+cabal.sandbox.config
+dist
+.corectl
+.ghc
+tmp
+gen/BuildInfo_smith_http.hs
+gen/version.txt
+.env
+purescript/gen
+/demo
