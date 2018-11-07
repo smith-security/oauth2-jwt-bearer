@@ -1,3 +1,6 @@
+-- |
+-- Authorization grant flow implementation. You probably want 'Network.OAuth2.JWT.Client'.
+--
 {-# LANGUAGE OverloadedStrings #-}
 module Network.OAuth2.JWT.Client.AuthorizationGrant (
     GrantError (..)

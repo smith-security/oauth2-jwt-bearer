@@ -1,3 +1,6 @@
+-- |
+-- Serialisation of token response. You probably want 'Network.OAuth2.JWT.Client'.
+--
 {-# LANGUAGE OverloadedStrings #-}
 module Network.OAuth2.JWT.Client.Serial (
     response

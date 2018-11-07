@@ -1,3 +1,6 @@
+-- |
+-- Data types. You probably want 'Network.OAuth2.JWT.Client'.
+--
 module Network.OAuth2.JWT.Client.Data (
   -- * Claims
     Issuer (..)

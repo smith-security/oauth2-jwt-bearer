@@ -35,6 +35,7 @@ library
   exposed-modules:
     Network.OAuth2.JWT.Client
     Network.OAuth2.JWT.Client.Data
+    Network.OAuth2.JWT.Client.Example
     Network.OAuth2.JWT.Client.Serial
     Network.OAuth2.JWT.Client.AuthorizationGrant
 

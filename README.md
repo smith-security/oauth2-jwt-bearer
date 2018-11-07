@@ -37,9 +37,13 @@ production level usage. The library will be maintained going forward.
 A crude example:
 
 ```
-import           Crypto.JWT (JWT)
+{-# LANGUAGE OverloadedStrings #-}
+module Network.OAuth2.JWT.Client.Example where
+
+import           Crypto.JWT (JWK)
 import           Network.OAuth2.JWT.Client
 import           Network.HTTP.Client (Manager)
+
 
 example :: Manager -> JWK -> IO (Either GrantError AccessToken)
 example manager key =  do
@@ -68,7 +72,8 @@ the network the request will be serialised so that only one request is
 made for a new token.
 
 The access token can be used as a bearer token in an `Authorization`
-header. See the specification for more details but it would be like:
+header. See the specification for more details but it would be
+something like:
 
 ```
 Authorization: Bearer ${ACCESS_TOKEN}
