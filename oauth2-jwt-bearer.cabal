@@ -6,11 +6,20 @@ license:  BSD3
 license-file: LICENSE
 author: Mark Hibberd
 maintainer: mth@smith.st
+homepage: https://github.com/smith-security/oauth2-jwt-bearer
+bug-reports: https://github.com/smith-security/oauth2-jwt-bearer/issues
 copyright: (c) 2018, HotelKilo
 category: Network
 build-type: Simple
 extra-source-files: ChangeLog.md, README.md
 cabal-version: >= 1.10
+description:
+  This is an implementation of the jwt-bearer authorization grant flow
+  that is specified by the OAuth2 JWT profile in
+  <https://tools.ietf.org/html/rfc7523 rfc7523>.
+source-repository head
+  type:     git
+  location: git@github.com:smith-security/oauth2-jwt-bearer.git
 
 library
   default-language: Haskell2010
