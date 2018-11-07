@@ -17,17 +17,25 @@ library
   build-depends:
       aeson >= 1.0 && < 1.5
     , base >= 4.10 && < 5
-    , text == 1.*
+    , bytestring == 0.10.*
     , http-client >= 0.5 && < 0.6
     , http-client-tls >= 0.2 && < 0.4
     , http-types == 0.*
+    , lens == 4.*
+    , text == 1.*
+    , time == 1.*
+    , transformers >= 0.4 && < 0.6
+    , transformers-bifunctors == 0.*
+    , unordered-containers == 0.2.*
     , jose == 0.7.*
 
   hs-source-dirs:
     src
 
   exposed-modules:
+    Network.OAuth2.JWT.Client
     Network.OAuth2.JWT.Client.Data
+    Network.OAuth2.JWT.Client.Serial
     Network.OAuth2.JWT.Client.AuthorizationGrant
 
 test-suite test
@@ -36,9 +44,26 @@ test-suite test
   main-is: test.hs
   hs-source-dirs: test
   build-depends:
-      base >= 4.10 && < 5
+      aeson
+    , async
+    , base >= 4.10 && < 5
+    , bytestring
+    , cryptonite
     , hedgehog == 0.6.*
+    , http-client
+    , http-client-tls
+    , http-types
+    , jose
+    , mmorph == 1.*
+    , network
     , oauth2-jwt-bearer
+    , Spock-core
+    , streaming-commons
+    , text
+    , warp
+    , x509
+    , x509-store
 
   other-modules:
+    Test.Network.OAuth2.JWT.Client.TestServer
     Test.Network.OAuth2.JWT.Client.AuthorizationGrant
