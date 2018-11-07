@@ -126,7 +126,12 @@ prop_google =
         store <- liftIO $ newStore manager endpoint claims jwk
         token <- liftIO (grant store) >>= evalEither
         liftIO $
+          Text.putStrLn "=== BEGIN TOKEN ==="
+        liftIO $
           Text.putStrLn . Text.pack . show $ token
+        liftIO $
+          Text.putStrLn "=== END TOKEN ==="
+
 
 tests :: IO Bool
 tests =
