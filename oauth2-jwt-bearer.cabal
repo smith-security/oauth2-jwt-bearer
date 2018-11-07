@@ -6,7 +6,6 @@ license:  BSD3
 license-file: LICENSE
 author: Mark Hibberd
 maintainer: mth@smith.st
-homepage: https://github.com/smith-security/oauth2-jwt-bearer
 bug-reports: https://github.com/smith-security/oauth2-jwt-bearer/issues
 copyright: (c) 2018, HotelKilo
 category: Network
