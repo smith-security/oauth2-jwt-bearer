@@ -4,7 +4,7 @@ This is an implementation of the jwt-bearer authorization grant flow
 that is specified by the OAuth2 JWT profile in
 [rfc7523](https://tools.ietf.org/html/rfc7523).
 
-The goal is to implement a portable implementation of this flow that
+The aim is to achieve a portable implementation of this flow that
 can be used against multiple servers. Its goal is to be pretty
 general, and has been tested against the [Google Cloud Platform OAuth2
 implementation](https://developers.google.com/identity/protocols/OAuth2ServiceAccount),
@@ -16,7 +16,7 @@ test and address it.
 ### Why?
 
 OAuth2 / OIDC flows are complicated enough that it warrants having an
-implementation to fall back on. The scope of this library is one
+implementation to fall back on. This library provides a
 specific flow to make the implementation manageable. It would be nice
 to have a complete set of flow implentations, but the reality is that
 OAuth2 doesn't really offer much in the terms of interoperability - it
@@ -61,8 +61,8 @@ example manager key =  do
 The key function here is the `grant` function which is what you call
 to get your access token.
 
-The `grant` function obtains an access token, if we have already
-aquired one (and it is still valid) we will re-use that token, if we
+The `grant` function obtains an access token. If we have already
+aquired one (and it is still valid) we will re-use that token. If we
 don't already have a token or the token has expired, we go and ask for
 a new one.
 
