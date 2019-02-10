@@ -45,7 +45,7 @@ data GrantError =
     deriving (Eq, Show)
 
 -- |
--- Obtain an access token, if we have already aquired one (and
+-- Obtain an access token. If we have already aquired one (and
 -- it is still valid) we will re-use that token, if we don't
 -- already have a token or the token has expired, we go and
 -- ask for a new one.
