@@ -78,3 +78,7 @@ something like:
 ```
 Authorization: Bearer ${ACCESS_TOKEN}
 ```
+
+### Builds
+
+[![CircleCI](https://circleci.com/gh/smith-security/oauth2-jwt-bearer.svg?style=svg)](https://circleci.com/gh/smith-security/oauth2-jwt-bearer)
