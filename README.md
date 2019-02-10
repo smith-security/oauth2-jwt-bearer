@@ -61,13 +61,13 @@ example manager key =  do
 The key function here is the `grant` function which is what you call
 to get your access token.
 
-The `grant` function obtains an access token, if we have already
-aquired one (and it is still valid) we will re-use that token, if we
+The `grant` function obtains an access token. If we have already
+aquired one (and it is still valid) we will re-use that token. If we
 don't already have a token or the token has expired, we go and ask for
 a new one.
 
 This operation is safe to call from multiple threads. If we are using
-a current token reads will happen concurrently, If we have to go to
+a current token reads will happen concurrently. If we have to go to
 the network the request will be serialised so that only one request is
 made for a new token.
 
