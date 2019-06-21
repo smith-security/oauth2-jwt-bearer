@@ -1,0 +1,15 @@
+steps:
+  - label: oauth2-jwt-bearer
+    plugins:
+      - docker-compose#v3.0.3:
+          run: haskell
+          config: '.buildkite/docker-compose.yml'
+    command:
+      - 'aws s3 cp s3://smith-artefacts/cache/oauth2-jwt-bearer-cache.tar.gz oauth2-jwt-bearer-cache.tar.gz || true'
+      - 'tar xfz openssh-protcol-cache.tar.gz -C /root || true'
+      - 'rm -f openssh-protcol-cache.tar.gz'
+      - 'mafia update'
+      - 'mafia build'
+      - 'tar cfz oauth2-jwt-bearer-cache.tar.gz -C /root .mafia .cabal'
+      - 'aws s3 cp oauth2-jwt-bearer-cache.tar.gz s3://smith-artefacts/cache/oauth2-jwt-bearer-cache.tar.gz'
+      - 'mafia test'
