@@ -1,0 +1,10 @@
+version: '2'
+services:
+  haskell:
+    image: markhibberd/haskell-circleci:latest
+    volumes:
+      - ..:/build
+    working_dir: /build
+    environment:
+      BUILDKITE_BRANCH: "${BUILDKITE_BRANCH}"
+      BUILDKITE_BUILD_NUMBER: "${BUILDKITE_BUILD_NUMBER}"
