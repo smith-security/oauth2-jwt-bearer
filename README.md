@@ -36,7 +36,7 @@ production level usage. The library will be maintained going forward.
 
 A crude example:
 
-```
+```haskell
 {-# LANGUAGE OverloadedStrings #-}
 module Network.OAuth2.JWT.Client.Example where
 
